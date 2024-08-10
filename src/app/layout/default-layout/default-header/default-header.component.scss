@@ -1,5 +1,14 @@
-header-container {
-    background-color: #3476b8; 
-    
-  }
-  
+:root {
+  --color-blue-background: #007bff;
+  --color-blue-text: #ffffff;
+}
+
+body.theme-blue {
+  background-color: var(--color-blue-background);
+  color: var(--color-blue-text);
+}
+
+.header.theme-blue {
+  background-color: var(--color-blue-background);
+  color: var(--color-blue-text);
+}

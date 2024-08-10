@@ -1,0 +1,42 @@
+
+  
+  <div class="card">
+    <div class="card-header">
+        <strong class="card-title">Alimentos</strong>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="table-header">
+                <div class="entries-per-page">
+                    <p-dropdown [options]="rowsPerPageOptions" [(ngModel)]="rows"></p-dropdown>
+                </div>
+                <div class="search-container">
+                    <input type="text" pInputText placeholder="Search" (input)="applyGlobalFilter($event)">
+                </div>
+            </div>
+            <p-table #dt [value]="filteredAlimentos" [paginator]="true" [rows]="rows" [rowsPerPageOptions]="rowsPerPageOptions" paginatorPosition="bottom" [globalFilterFields]="globalFilterFields">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th *ngFor="let col of cols" pSortableColumn="{{col.field}}">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                        <th>Acciones</th> 
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-alimento>
+                    <tr>
+                        <td *ngFor="let col of cols">{{alimento[col.field]}}</td>
+                        <td> 
+                            <div class="btn-group text-align-center" role="group" aria-label="Botones de Acciones">
+                              <button class="btn btn-warning mr-2" (click)="editarAlimento(alimento)"><i class="fas fa-edit"></i></button>
+                              <button class="btn btn-danger" (click)="eliminarAlimento(alimento)"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+  </div>
+  

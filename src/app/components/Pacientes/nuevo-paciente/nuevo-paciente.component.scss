@@ -1,0 +1,84 @@
+.tabs-container {
+  background-color: #f0f9ff; 
+  padding: 0;
+  margin: 0;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+  border: 2px solid transparent;
+  border-radius: 12px 12px 0 0;
+  color: #0056b3; 
+  padding: 12px 20px; 
+  background-color: #f0f9ff;
+  margin-bottom: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e3f2fd; 
+  border-color: #0056b3; 
+  color: #00274d;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #d1e7ff; 
+  color: #00274d; 
+  border-color: #0056b3;
+}
+
+.nav-tabs .nav-link.active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 4px;
+  background-color: #0056b3; 
+  border-radius: 2px 2px 0 0;
+  transform: translateX(-50%);
+}
+
+
+.card-custom {
+    background-color:#bae4e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-label {
+    font-weight: bold;
+  }
+  .btn-custom {
+    background-color: #4EBAB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  

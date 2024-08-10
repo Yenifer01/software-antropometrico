@@ -1,4 +1,5 @@
 import { Component, computed, DestroyRef, inject, Input } from '@angular/core';
+
 import {
   AvatarComponent,
   BadgeComponent,
@@ -28,6 +29,7 @@ import { IconDirective } from '@coreui/icons-angular';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, map, tap } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-default-header',
   templateUrl: './default-header.component.html',
@@ -44,7 +46,7 @@ export class DefaultHeaderComponent extends HeaderComponent {
   readonly colorModes = [
     { name: 'light', text: 'Light', icon: 'cilSun' },
     { name: 'dark', text: 'Dark', icon: 'cilMoon' },
-    { name: 'auto', text: 'Auto', icon: 'cilContrast' }
+    { name: 'auto', text: 'Auto', icon: 'cilContrast' },
   ];
 
   readonly icons = computed(() => {
@@ -56,7 +58,6 @@ export class DefaultHeaderComponent extends HeaderComponent {
     super();
     this.#colorModeService.localStorageItemName.set('coreui-free-angular-admin-template-theme-default');
     this.#colorModeService.eventName.set('ColorSchemeChange');
-
     this.#activatedRoute.queryParams
       .pipe(
         delay(1),
@@ -69,9 +70,7 @@ export class DefaultHeaderComponent extends HeaderComponent {
       )
       .subscribe();
   }
-
   @Input() sidebarId: string = 'sidebar1';
-
   public newMessages = [
   ];
 }

@@ -2,19 +2,24 @@
 <c-sidebar
   #sidebar1="cSidebar"
   class="d-print-none sidebar sidebar-fixed border-end"
-  color="#4EBAB0"
   id="sidebar1"
   visible
 >
   <c-sidebar-header class="border-bottom">
     <c-sidebar-brand [routerLink]="[]">
-      <svg [class]="{icon: false}" cIcon class="sidebar-brand-full" height="32" name="logo" title="CoreUI Logo"></svg>
-      <svg cIcon class="sidebar-brand-narrow" height="32" name="signet" title="CoreUI Logo"></svg>
+      <div class="logo-container">
+        <img src="assets/images/logo.png" class="logo-circle" alt="Logo">
+        <span class="user-title">AnthroFit</span>
+      </div>
     </c-sidebar-brand>
   </c-sidebar-header>
 
   <ng-scrollbar #scrollbar="ngScrollbar" (updated)="onScrollbarUpdate(scrollbar.state)" class="overflow" pointerEventsMethod="scrollbar" visibility="hover">
-    <c-sidebar-nav #overflow [navItems]="navItems" dropdownMode="close" compact />
+    <!-- <c-sidebar-nav #overflow [navItems]="navItems" dropdownMode="close" compact /> -->
+   
+
+  <c-sidebar-nav [navItems]="navItems" compact></c-sidebar-nav>
+  
   </ng-scrollbar>
   @if (!sidebar1.narrow) {
     <c-sidebar-footer cSidebarToggle="sidebar1" class="border-top d-none d-lg-flex" toggle="unfoldable" style="cursor: pointer;">
@@ -23,7 +28,6 @@
   }
 </c-sidebar>
 
-<!--main-->
 <div class="wrapper d-flex flex-column min-vh-100">
   <!--app-header-->
   <app-default-header

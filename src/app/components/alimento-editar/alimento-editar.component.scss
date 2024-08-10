@@ -1,0 +1,50 @@
+.h{
+    float: right;
+    
+}
+.m{
+  background-color: #4EBAB0;
+   
+}
+
+  
+.main-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Estilos para la tarjeta */
+  .card {
+    margin-top: -50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-select {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .input-group-text {
+    background-color: #4ebaaf64;
+    color: #333;
+  }
+  
+ 
+  
+  

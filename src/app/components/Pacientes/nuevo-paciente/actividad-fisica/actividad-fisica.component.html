@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="card card-custom mt-3">
+      <form>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="tipo" class="form-label">Tipo:</label>
+                <select class="form-control" id="tipo">
+                  <option value="" >Seleccione una opción</option>
+                  <option value="Caminar lento">Caminar lento</option>
+                  <option value="Caminar rápido">Caminar rápido</option>
+                  <option value="Caminar de subida">Caminar de subida</option>
+                  <option value="Caminar de bajada">Caminar de bajada</option>
+                  <option value="Subir escaleras">Subir escaleras</option>
+                  <option value="Ejercicios aeróbicos-Baja intensidad">Ejercicios aeróbicos-Baja intensidad</option>
+                  <option value="Ejercicios aeróbicos-Alta intensidad">Ejercicios aeróbicos-Alta intensidad</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="intensidad" class="form-label">Intensidad:</label>
+                <select class="form-control" id="intensidad">
+                  <option value="Seleccione una opción">Seleccione una opción</option>
+                  <option value="Sedentario">Sedentario</option>
+                  <option value="Sedentario o actividad ligera">Sedentario o actividad ligera</option>
+                  <option value="Activo o actividad moderada">Activo o actividad moderada</option>
+                  <option value="Vigoroso o actividad fuerte">Vigoroso o actividad fuerte</option>
+                </select>
+              </div>
+          <div class="form-group">
+            <label for="frecuencia" class="form-label">Frecuencia:</label>
+            <select class="form-control" id="frecuencia">
+              <option value="">Seleccione una opción</option>
+              <option value="Sin actividad">Sin actividad</option>
+              <option value="3 Hs/Sem">3 Hs/Sem</option>
+              <option value="3 Hrs/Sem">3 Hrs/Sem</option>
+              <option value="4-5 Hrs/Día">4-5 Hrs/Día</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="duracion" class="form-label">Duración:</label>
+            <input type="number" class="form-control" id="duracion">
+          </div>
+          <div class="form-group">
+            <label for="actividad" class="form-label">Fc.Actividad:</label>
+            <input type="number" class="form-control" id="actividad">
+          </div>
+        </div>
+        <a class="btn btn-custom float-right fw-bold" routerLink="/pacientes/habitos">Atrás</a>
+        <a class="btn btn-custom float-end fw-bold" routerLink="/pacientes/antecedentes-familiares">Siguiente</a>
+      </form>
+    </div>
+  </div>
+  

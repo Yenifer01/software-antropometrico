@@ -23,6 +23,34 @@ export const routes: Routes = [
         loadChildren: () => import('./components/alimento-nuevo/routes').then((m) => m.routes)
       },
       {
+        path: 'alimentos',
+        loadChildren: () => import('./components/alimento-lista/routes').then((m) => m.routes)
+      },
+      {
+        path: 'alimentos',
+        loadChildren: () => import('./components/alimento-editar/routes').then((m) => m.routes)
+      },
+      {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/routes').then((m) => m.routes)
+      },
+      {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/habitos/routes').then((m) => m.routes)
+      },
+      {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/funciones-biologicas/routes').then((m) => m.routes)
+      },
+      {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/actividad-fisica/routes').then((m) => m.routes)
+      },
+      {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/antecedentes-familiares/routes').then((m) => m.routes)
+      },
+      {
         path: 'icons',
         loadChildren: () => import('./views/icons/routes').then((m) => m.routes)
       },

@@ -48,7 +48,6 @@ export class ColorsComponent implements OnInit, AfterViewInit {
     this.themeColors();
   }
 }
-
 @Component({
     selector: 'app-theme-color',
     template: `

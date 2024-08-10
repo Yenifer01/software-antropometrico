@@ -2,24 +2,25 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Dashboard',
+    name: 'DASHBOARD',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
   },
   {
-    name: 'Pacientes',
-    url: '/base',
+    name: 'PACIENTES',
+    url: '/pacientes',
     icon: 'fas fa-users',
+    class: 'custom-class',
     
     children: [
       {
         name: 'Agregar Paciente',
-        url: '/base/accordion',
+        url: '/pacientes/nuevo-paciente',
         icon: 'nav-icon-bullet'
       },
       {
         name: 'Lista de Pacientes',
-        url: '/base/breadcrumbs',
+        url: '/hola',
         icon: 'nav-icon-bullet'
       },
       
@@ -55,7 +56,7 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: 'Alimentos',
+    name: 'ALIMENTOS',
     icon: 'fas fa-utensils',
     url: '/alimentos',
     children: [
@@ -66,13 +67,14 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Lista de Alimentos',
-        url: '/icons/flags',
+        url: '/alimentos/alimentos-lista',
         icon: 'nav-icon-bullet'
       },
+
     ]
   },
   {
-    name: 'Reportes',
+    name: 'REPORTES',
     url: '/notifications',
     icon: 'fas fa-chart-line',
     children: [

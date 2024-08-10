@@ -1,1 +1,204 @@
-<p>alimento-nuevo works!</p>
+
+      
+        <div class="card mt-1 mb-3">
+          <div class="card-body">
+            <form (submit)="onSubmit()">
+              <div class="mb-3">
+                <label for="codigo" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigo" name="codigo" [(ngModel)]="nuevoAlimento.codigo" />
+              </div>
+              
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del alimento</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nuevoAlimento.nombre" />
+              </div>
+
+              <div class="mb-3">
+                <label for="grupo" class="form-label">Grupo</label>
+                <select class="form-select" id="grupo" name="grupo" [(ngModel)]="nuevoAlimento.id_grupo">
+                  <option [ngValue]="null">Selecciona un grupo</option>
+                  <option *ngFor="let grupo of grupos" [ngValue]="grupo.id_grupo">
+                    {{ grupo.nombre }}
+                  </option>
+                </select>
+              </div>
+              
+              <div class="row" style="margin-top: 4%;">
+                
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Energía</span>
+                    <input type="number" class="form-control" id="energia_kcal" name="energia_kcal" [(ngModel)]="nuevoAlimento.energia_kcal" />
+                    <span class="input-group-text">Kcal</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Energía</span>
+                    <input type="number" class="form-control" id="energia_kj" name="energia_kj" [(ngModel)]="nuevoAlimento.energia_kj" />
+                    <span class="input-group-text">Kj</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Agua</span>
+                    <input type="number" class="form-control" id="agua_g" name="agua_g" [(ngModel)]="nuevoAlimento.agua_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Proteínas Totales</span>
+                    <input type="number" class="form-control" id="proteinas_totales_g" name="proteinas_totales_g" [(ngModel)]="nuevoAlimento.proteinas_totales_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Proteínas Vegetales</span>
+                    <input type="number" class="form-control" id="proteinas_vegetales_g" name="proteinas_vegetales_g" [(ngModel)]="nuevoAlimento.proteinas_vegetales_g" />
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Proteínas Animal</span>
+                    <input type="number" class="form-control" id="proteinas_animal" name="proteinas_animal" [(ngModel)]="nuevoAlimento.proteinas_animal"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Grasa Total</span>
+                    <input type="number" class="form-control" id="grasa_total_g" name="grasa_total_g" [(ngModel)]="nuevoAlimento.grasa_total_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Carbohidratos Totales</span>
+                    <input type="number" class="form-control" id="carbohidratos_totales_g" name="carbohidratos_totales_g" [(ngModel)]="nuevoAlimento.carbohidratos_totales_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Carbohidratos Disponibles</span>
+                    <input type="number" class="form-control" id="carbohidratos_disponibles_g" name="carbohidratos_disponibles_g" [(ngModel)]="nuevoAlimento.carbohidratos_disponibles_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Fibra Dietaria</span>
+                    <input type="number" class="form-control" id="fibra_dietaria_g" name="fibra_dietaria_g" [(ngModel)]="nuevoAlimento.fibra_dietaria_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Cenizas</span>
+                    <input type="number" class="form-control" id="cenizas_g" name="cenizas_g" [(ngModel)]="nuevoAlimento.cenizas_g"/>
+                    <span class="input-group-text">g</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Calcio</span>
+                    <input type="number" class="form-control" id="calcio_mg" name="calcio_mg" [(ngModel)]="nuevoAlimento.calcio_mg"/>
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Fósforo</span>
+                    <input type="number" class="form-control" id="fosforo_mg" name="fosforo_mg" [(ngModel)]="nuevoAlimento.fosforo_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Zinc</span>
+                    <input type="number" class="form-control" id="zinc_mg" name="zinc_mg" [(ngModel)]="nuevoAlimento.zinc_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Hierro</span>
+                    <input type="number" class="form-control" id="hierro_mg" name="hierro_mg" [(ngModel)]="nuevoAlimento.hierro_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Caroteno Equiv. Totales</span>
+                    <input type="number" class="form-control" id="caroteno_equivalentes_totales_ug" name="caroteno_equivalentes_totales_ug" [(ngModel)]="nuevoAlimento.caroteno_equivalentes_totales_ug" />
+                    <span class="input-group-text">ug</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Vitamina A Equiv.Totales</span>
+                    <input type="number" class="form-control" id="vitaminaA_equivalentes_totales_ug" name="vitaminaA_equivalentes_totales_ug" [(ngModel)]="nuevoAlimento.vitaminaA_equivalentes_totales_ug" />
+                    <span class="input-group-text">ug</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Tiamina</span>
+                    <input type="number" class="form-control" id="tiamina_mg" name="tiamina_mg" [(ngModel)]="nuevoAlimento.tiamina_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Riboflavina</span>
+                    <input type="number" class="form-control" id="riboflavina_mg" name="riboflavina_mg" [(ngModel)]="nuevoAlimento.riboflavina_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Niacina (mg)</span>
+                    <input type="number" class="form-control" id="niacina_mg" name="niacina_mg" [(ngModel)]="nuevoAlimento.niacina_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Vitamina C</span>
+                    <input type="number" class="form-control" id="vitaminaC_mg" name="vitaminaC_mg" [(ngModel)]="nuevoAlimento.vitaminaC_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Ácido Fólico</span>
+                    <input type="number" class="form-control" id="acido_folico_ug" name="acido_folico_ug" [(ngModel)]="nuevoAlimento.acido_folico_ug" />
+                    <span class="input-group-text">ug</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Sodio</span>
+                    <input type="number" class="form-control" id="sodio_mg" name="sodio_mg" [(ngModel)]="nuevoAlimento.sodio_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="input-group">
+                    <span class="input-group-text">Potasio</span>
+                    <input type="number" class="form-control" id="potasio_mg" name="potasio_mg" [(ngModel)]="nuevoAlimento.potasio_mg" />
+                    <span class="input-group-text">mg</span>
+                  </div>
+                </div>
+
+              </div>
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+          </div>
+        </div>
+    
