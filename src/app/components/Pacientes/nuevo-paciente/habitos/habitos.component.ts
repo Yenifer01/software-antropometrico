@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-habitos',
@@ -9,5 +9,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './habitos.component.scss'
 })
 export class HabitosComponent {
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+) { }
+
+  atras(){
+    this.router.navigate(['/pacientes/nuevo-paciente']);
+  }
 
 }

@@ -1,4 +1,29 @@
-<div class="container mt-5">
+<div class="container-fluid">
+  <div class="tabs-container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Datos personales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Hábitos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Funciones biológicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Actividad física fuera del trabajo (OMS)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Antecedentes familiares y personales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Evaluación antropométrica (OMS)</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container mt-4">
     <div class="card card-custom mt-3">
       <form>
         <div class="form-grid">
@@ -30,7 +55,7 @@
           </div>
         </div>
 
-        <a class="btn btn-custom float-start fw-bold" type="button" routerLink="/pacientes/habitos">Atrás</a>
+        <a class="btn btn-custom float-start fw-bold" type="button" (click)="atras()">Atrás</a>
         <a class="btn btn-custom float-end fw-bold" routerLink="/pacientes/funciones-biologicas">Siguiente </a>
       </form>
     </div>

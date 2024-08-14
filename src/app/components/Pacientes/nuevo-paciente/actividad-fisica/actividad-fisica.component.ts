@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-actividad-fisica',
@@ -9,5 +9,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './actividad-fisica.component.scss'
 })
 export class ActividadFisicaComponent {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+) { }
+
+  atras(){
+    this.router.navigate(['/pacientes/funciones-biologicas']);
+  }
 
 }

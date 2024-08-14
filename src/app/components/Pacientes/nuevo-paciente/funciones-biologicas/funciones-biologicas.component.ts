@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-funciones-biologicas',
@@ -9,5 +9,14 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './funciones-biologicas.component.scss'
 })
 export class FuncionesBiologicasComponent {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+) { }
+
+  atras(){
+    this.router.navigate(['/pacientes/habitos']);
+  }
+
 
 }

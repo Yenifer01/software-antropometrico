@@ -51,6 +51,10 @@ export const routes: Routes = [
         loadChildren: () => import('./components/Pacientes/nuevo-paciente/antecedentes-familiares/routes').then((m) => m.routes)
       },
       {
+        path: 'pacientes',
+        loadChildren: () => import('./components/Pacientes/nuevo-paciente/evaluacion-antropometrica/routes').then((m) => m.routes)
+      },
+      {
         path: 'icons',
         loadChildren: () => import('./views/icons/routes').then((m) => m.routes)
       },
