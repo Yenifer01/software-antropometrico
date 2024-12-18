@@ -1,8 +1,7 @@
-
 .tabs-container {
   background-color: #ffffff; 
   padding: 10px;
-  border-radius: 12px 12px 12px 12px; 
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 .nav-tabs {
@@ -10,35 +9,52 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
 }
 .nav-tabs .nav-item {
-  margin: 0 5px; 
-  flex: 1; 
-  text-align: center; 
+  margin: 0 10px; 
+  flex: 0 1 auto; 
+  text-align: center;
 }
 .nav-tabs .nav-link {
   border: 2px solid transparent;
-  border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
   color: black; 
-  padding: 8px 15px;  
+  padding: 8px 15px;
   background-color: #f0f9ff; 
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  display: block; 
-  line-height: 1.2; 
+  display: block;
+  line-height: 1.2;
+  font-size: 16px; 
   height: 74px; 
 }
-
 .nav-tabs .nav-link.active {
   background-color: #e3f2fd;
   border-color: #4EBAB0;
-  border-width: 3px; 
+  border-width: 3px;
   color: black;
   font-weight: bold;
 }
 .nav-tabs .nav-link:hover {
   background-color: #d1e7ff; 
   color: #00274d; 
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 767px) {
+  .nav-tabs {
+    flex-wrap: wrap; 
+  }
+  .nav-tabs .nav-item {
+    flex: 1 1 100%; 
+    margin: 5px 0;
+  }
+  .nav-tabs .nav-link {
+    font-size: 14px; 
+    padding: 5px 10px;
+    height: auto; 
+  }
 }
 
 

@@ -73,4 +73,5 @@ export class DefaultHeaderComponent extends HeaderComponent {
   @Input() sidebarId: string = 'sidebar1';
   public newMessages = [
   ];
+  
 }

@@ -54,18 +54,21 @@
              </div>
 
              <div class="form-group">
-                <label for="duracion" class="form-label">Peso Actual(Kg):</label>
-                 <input type="number" class="form-control" id="duracion">
+              <label for="pesoActual" class="form-label">Peso Actual(Kg):</label>
+              <input type="number" class="form-control" id="pesoActual" name="pesoActual" [(ngModel)]="pesoActual" (ngModelChange)="calcularIndicePonderal()">
              </div>
 
              <div class="form-group">
-                <label for="duracion" class="form-label">Talla(m):</label>
-                 <input type="number" class="form-control" id="duracion">
+              <label for="talla" class="form-label">Talla(m):</label>
+              <input type="number" class="form-control" id="talla" [(ngModel)]="talla" name="talla" (ngModelChange)="calcularIndicePonderal()">
              </div>
+
              <div class="form-group">
-                <label for="duracion" class="form-label">Índice Ponderal:</label>
-                 <input type="number" class="form-control" id="duracion">
+              <label for="indicePonderal" class="form-label">Índice Ponderal:</label>
+              <input type="number" class="form-control" id="indicePonderal" name="indicePonderal" [value]="indicePonderal !== null ? indicePonderal : ''" readonly>
              </div>
+            
+            
              <div class="form-group">
                 <label for="duracion" class="form-label">Peso Ideal IMC=22.4:</label>
                  <input type="number" class="form-control" id="duracion">

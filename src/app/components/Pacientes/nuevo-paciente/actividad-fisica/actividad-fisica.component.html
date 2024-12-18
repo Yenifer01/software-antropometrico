@@ -22,6 +22,7 @@
     </ul>
   </div>
 </div>
+
 <div class="container mt-4">
     <div class="card card-custom mt-3">
       <form>
@@ -41,14 +42,15 @@
               </div>
               <div class="form-group">
                 <label for="intensidad" class="form-label">Intensidad:</label>
-                <select class="form-control" id="intensidad">
-                  <option value="Seleccione una opción">Seleccione una opción</option>
-                  <option value="Sedentario">Sedentario</option>
-                  <option value="Sedentario o actividad ligera">Sedentario o actividad ligera</option>
-                  <option value="Activo o actividad moderada">Activo o actividad moderada</option>
-                  <option value="Vigoroso o actividad fuerte">Vigoroso o actividad fuerte</option>
+                <select class="form-control" id="intensidad" (change)="actualizarRecomendacion($event)">
+                  <option value="">Seleccione una opción</option>
+                  <option *ngFor="let intensida of intensidad" [value]="intensida.id">
+                    {{ intensida.estilo_vida }}
+                  </option>
                 </select>
               </div>
+              
+
           <div class="form-group">
             <label for="frecuencia" class="form-label">Frecuencia:</label>
             <select class="form-control" id="frecuencia">
@@ -65,7 +67,11 @@
           </div>
           <div class="form-group">
             <label for="actividad" class="form-label">Fc.Actividad:</label>
-            <input type="number" class="form-control" id="actividad">
+            <input type="number" class="form-control" id="actividad" placeholder="Escoger un promedio del campo recomendación">
+          </div>
+          <div class="form-group">
+            <label for="Recomendación" class="form-label">Recomendación:</label>
+            <input type="text" class="form-control" id="recomendación" [value]="recomendacionSeleccionada" readonly>
           </div>
         </div>
         <a class="btn btn-custom float-right fw-bold" (click)="atras()">Atrás</a>

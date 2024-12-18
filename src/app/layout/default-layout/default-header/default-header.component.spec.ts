@@ -33,7 +33,6 @@ describe('DefaultHeaderComponent', () => {
   beforeEach(() => {
     iconSetService = TestBed.inject(IconSetService);
     iconSetService.icons = { ...iconSubset };
-
     fixture = TestBed.createComponent(DefaultHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
